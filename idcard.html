@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="idcard.css">
+    <script src="https://kit.fontawesome.com/4b37b03f95.js" crossorigin="anonymous"></script>
+    <title>Id card generator</title>
+</head>
+
+<body>
+    <header class="text-center">
+        <h1>ID Card generator</h1>
+    </header>
+    <div class="container">
+        <div class="section-container">
+            <div class="text-center">
+                Input form
+            </div>
+            <form onsubmit="return false">
+                <div class="form-element">
+                    <label class="form-label">
+                        Enter Name:
+                    </label>
+                    <input type="text" id="name" />
+                </div>
+                <div class="form-element">
+                    <label class="form-label">
+                        Enter College Name:
+                    </label>
+                    <input type="text" id="collegeName" />
+                </div>
+                <div class="form-element">
+                    <label class="form-label">
+                        Enter Location:
+                    </label>
+                    <input type="text" id="location" />
+
+                </div>
+                <button onclick="generateCard()">Generate Card</button>
+            </form>
+        </div>
+        <div class="section-container">
+            <div class="id-card-container" id="collegeCard">
+                <div class="text-center">
+                    Generated Card
+                </div>
+                <div class="card-container">
+                    <div class="card-wrapper">
+                        <div class="user-card">
+                            <span class="user-photo">
+                                <div id="x"></div>
+                                <i class="fas fa-user"></i>
+                            </span>
+                        </div>
+                        <div class="general-information">
+                            <div class="card-element card-name">
+                                <span>Name:</span>
+                                <span id="cardName"></span>
+                            </div>
+                            <div class="card-element college-name">
+                                <span>College Name:</span>
+                                <span id="cardCollegeName"></span>
+                            </div>
+                            <div class="card-element college-name">
+                                <span>Location:</span>
+                                <span id="cardLocation"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="idcard.js"></script>
+</body>
+
+</html>
